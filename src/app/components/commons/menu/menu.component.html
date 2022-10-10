@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a style="color: orange" class="navbar-brand" href="index.html">
+        <img class="logo" src="https://cdn-icons-png.flaticon.com/512/2060/2060284.png" width ="28" alt="">CUSCO CITY TOURS
+      </a>
+      <button class="navbar-toggler" type="button" (click)="collapse.toggle()" data-bs-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ngx-navbar-collapse #collapse="ngxNavbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" routerLink="/galeria" aria-current="page" routerLinkActive="active">Galeria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/detalleProducto" routerLinkActive="active">Producto</a>
+            </li>
+            <li class="nav-item dropdown" dropdown>
+                <a class="nav-link dropdown-toggle" dropdownToggle href="#" id="categoriaDropdown" role="button" aria-controls="dropdownCategoria">
+                  Categorias
+                </a>
+                <ul class="dropdown-menu" id="dropdownCategoria" *dropdownMenu aria-labelledby="categoriaDropdow">
+                  <li><a class="dropdown-item" href="#">categoria 01</a></li>
+                  <li><a class="dropdown-item" href="#">categoria 02</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Mas</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+        </ngx-navbar-collapse>
+    </div>
+  </nav>
