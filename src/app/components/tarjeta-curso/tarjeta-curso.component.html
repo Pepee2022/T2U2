@@ -1,0 +1,10 @@
+<div style="padding-bottom: 0;">
+    <img [src]=curso.imagen  class="img-thumbnail" alt="imagen">
+    <div>
+        <strong>Descipcion:</strong>
+    </div>
+    <p>{{ curso.descripcion }}</p>
+    <p><strong>Precio:</strong>{{ curso.precio }}</p>
+    <p><strong>Capacidad:</strong>{{ curso.capacidad }}</p>
+    <button class="btn btn-primary" (click)="clickAgregar(curso.id)">Agregar</button>   
+</div>

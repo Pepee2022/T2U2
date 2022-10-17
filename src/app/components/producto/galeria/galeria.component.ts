@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Paquete } from 'src/app/model/paquete.model';
+import { StoreService } from 'src/app/services/store.service';
 
 @Component({
   selector: 'app-galeria',
@@ -8,30 +9,34 @@ import { Paquete } from 'src/app/model/paquete.model';
 })
 export class GaleriaComponent implements OnInit {
 
-  constructor() { }
+  paquetes: Paquete[] = [
+  ];
+
+  constructor(private storeService: StoreService) { 
+    this.paquetes = storeService.paquetes;
+  }
 
   ngOnInit(): void {
   }
-
-  paquetes: Paquete[] = [{
-    img: 'https://www.boletomachupicchu.com/gutblt/wp-content/uploads/2018/06/montana-siete-colores-informacion.jpg',
-    tour: 'Montaña de 7 Colores',
-    descripcion: 'A unos 100 kilómetros al sureste de Cusco, Perú, existe un arcoíris hecho montaña.',
-    precio: 250
-  },
-  {
-    img: 'https://www.boletomachupicchu.com/gutblt/wp-content/uploads/2018/10/palcoyo.jpg',
-    tour: 'Cordillera de Palccoyo',
-    descripcion: '-----',
-    precio: 400
-  },
-  {
-    img: 'https://cdn.getyourguide.com/img/tour/5d187adc926b0.jpeg/146.jpg',
-    tour: '4 Ruinas en Cusco',
-    descripcion: '------',
-    precio: 300
-  }
-  ]
+  // paquetes: Paquete[] = [{
+  //   img: 'https://www.boletomachupicchu.com/gutblt/wp-content/uploads/2018/06/montana-siete-colores-informacion.jpg',
+  //   tour: 'Montaña de 7 Colores',
+  //   descripcion: 'A unos 100 kilómetros al sureste de Cusco, Perú, existe un arcoíris hecho montaña.',
+  //   precio: 250
+  // },
+  // {
+  //   img: 'https://www.boletomachupicchu.com/gutblt/wp-content/uploads/2018/10/palcoyo.jpg',
+  //   tour: 'Cordillera de Palccoyo',
+  //   descripcion: '-----',
+  //   precio: 400
+  // },
+  // {
+  //   img: 'https://cdn.getyourguide.com/img/tour/5d187adc926b0.jpeg/146.jpg',
+  //   tour: '4 Ruinas en Cusco',
+  //   descripcion: '------',
+  //   precio: 300
+  // }
+  // ]
 
   t_img: string = '';
   t_tour: string = '';

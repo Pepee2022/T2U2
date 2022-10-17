@@ -12,6 +12,10 @@ import { MenuComponent } from './components/commons/menu/menu.component';
 import { FooterComponent } from './components/commons/footer/footer.component';
 import { GaleriaComponent } from './components/producto/galeria/galeria.component';
 import { DetalleProductoComponent } from './components/producto/detalle-producto/detalle-producto.component';
+import { CursosCortosComponent } from './pages/cursos-cortos/cursos-cortos.component';
+import { HomeComponent } from './pages/home/home.component';
+import { GaleriaCursosComponent } from './components/galeria-cursos/galeria-cursos.component';
+import { TarjetaCursoComponent } from './components/tarjeta-curso/tarjeta-curso.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { DetalleProductoComponent } from './components/producto/detalle-producto
     MenuComponent,
     FooterComponent,
     GaleriaComponent,
-    DetalleProductoComponent
+    DetalleProductoComponent,
+    CursosCortosComponent,
+    HomeComponent,
+    GaleriaCursosComponent,
+    TarjetaCursoComponent
   ],
   imports: [
     BrowserModule,
