@@ -1,0 +1,7 @@
+<!-- GUARDADO GALERIA --- GALERIA CURSOS -->
+<!-- <p>Cantidad de paquetes: {{ pags.length }}</p> -->
+<div class="row">
+    <div class="col" *ngFor="let paquete of viajes" >
+        <app-formato-galeria [paquete]="paquete" (pressAgregarP)="seleccionar($event)"></app-formato-galeria>
+    </div>
+</div>

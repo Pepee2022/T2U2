@@ -1,59 +1,45 @@
-<div class="container text-center">
+<!-- GALERIA --- CURSOS CORTOS -->
+
+<div class="container-fluid">
+  <h3 class="text-center" style="color: orange">PAQUETES A SU DISPOSICION: </h3> <br>
+  <app-guardado-galeria [viajes]="paquetes"></app-guardado-galeria>
+</div>
+
+<!-- <div class="container text-center">
   <div class="row">
       <div class="col" >
         <div class="card" style="width: 18rem;">
-            <img src={{paquetes[0].img}} class="card-img-top" alt="">
+            <img src={{paquetes[0].imge}} class="card-img-top" alt="">
             <div class="card-body">
               <h5 class="card-title">{{paquetes[0].tour}} </h5>
               <p class="card-text">{{paquetes[0].descripcion}} </p>
               <p class="card-text"> <span>$</span>{{paquetes[0].precio}} </p>
-              <button href="#" class="btn btn-warning" (click)="nuevoPaquete()">Agregar</button>
+              <button href="#" class="btn btn-warning" (click)="clickAgregarP(paquete.tour)">Agregar</button>
             </div>
         </div>
       </div>
       <div class="col" >
           <div class="card" style="width: 18rem;">
-            <img src={{paquetes[1].img}} class="card-img-top" alt="">
+            <img src={{paquetes[1].imge}} class="card-img-top" alt="">
             <div class="card-body">
               <h5 class="card-title">{{paquetes[1].tour}} </h5>
               <p class="card-text">{{paquetes[1].descripcion}} </p>
               <p class="card-text"> <span>$</span>{{paquetes[1].precio}} </p>
-              <button href="#" class="btn btn-warning" (click)="nuevoPaquete()">Agregar</button>
+              <button href="#" class="btn btn-warning" (click)="clickAgregarP(paquete.tour)">Agregar</button>
             </div>
           </div>
       </div>
       <div class="col" >
           <div class="card" style="width: 18rem;">
-            <img src={{paquetes[2].img}} class="card-img-top" alt="">
+            <img src={{paquetes[2].imge}} class="card-img-top" alt="">
             <div class="card-body">
               <h5 class="card-title">{{paquetes[2].tour}} </h5>
               <p class="card-text">{{paquetes[2].descripcion}} </p>
               <p class="card-text"> <span>$</span>{{paquetes[2].precio}} </p>
-              <button href="#" class="btn btn-warning" (click)="nuevoPaquete()">Agregar</button>
+              <button href="#" class="btn btn-warning" (click)="clickAgregarP(paquete.tour)">Agregar</button>
             </div>
           </div>
       </div>
   </div>    
-</div>
+</div> -->
 
-  <table class="table">
-    <thead>
-        <tr>
-            <th>TOURS</th>
-            <th>PAQUETE</th>
-            <th>DESCRIPCION</th>
-            <th>PRECIO</th> 
-            <th></th>  
-        </tr>
-    </thead>
-
-    <tbody class="table-group-divider">
-        <tr *ngFor="let carro of paquetes ;index as i">
-            <td>{{ carro.img}}</td>
-            <td>{{ carro.tour }}</td>
-            <td>{{ carro.descripcion }}</td>
-            <td>{{ carro.precio }}</td>
-            <td>  <button class="btn btn-outline-danger" (click)="eliminarPaquete(i)">Eliminar</button></td>
-        </tr>
-    </tbody>
-  </table>

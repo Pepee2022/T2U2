@@ -1,26 +1,26 @@
-<div class="container text-center">
-    <div class="row">
-        <h1 style="color:orange">PENDIENTE</h1>
-        <div class="col">
-            <label >PENDIENTE:</label>
-            <br>
-            <input type="text" >
-            <br>
-            <label >PENDIENTE: </label>
-            <br>
-            <input type="number" >
-            <br>
-        </div>
-        <div class="col">
-          <label >PENDIENTE: </label>
-          <br>
-          <input type="text" >
-          <br>
-        </div>
-        <h1></h1>
-        <div class="justify-content-lg-between">
-          <button type="button" class="btn btn-outline-warning">PENDIENTE</button>
-          <button type="button" class="btn btn-outline-danger">PENDIENTE</button>
-        </div>
-    </div>
-  </div>
+<!-- DETALLE PRODUCTO --- HOME  -->
+
+<p>ESTOS SON LOS PAQUETES QUE TIENE EN SU CARRITO</p>
+<P>Cantidad de paquetes: {{ pags.length }}</P>
+  <table class="table">
+    <thead>
+        <tr>
+            <th>TOURS</th>
+            <th>DESCRIPCION</th>
+            <th>PRECIO</th> 
+            <th></th>  
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr *ngFor="let paquete of pags ; index as i">
+          <td class="tour">{{ paquete.tour }}</td>
+          <td class="descripcion">{{ paquete.descripcion }}</td>
+          <td class="precio">{{ paquete.precio }}</td>
+          <td>  <button class="btn btn-outline-danger" (click)="eliminarPaquete(i)">Eliminar</button></td>
+      </tr>
+  </tbody>
+  </table>
+
+
+
+

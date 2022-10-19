@@ -1,0 +1,13 @@
+<!-- FORMATO GALERIA --- TARJETA CURSO -->
+
+<div class="container text-center">
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <img [src]=paquete.imge  class="img-thumbnail" alt="imge">
+        <h4>{{ paquete.tour }}</h4><br>
+        <p><strong>Descripcion:</strong>{{ paquete.descripcion }}</p>
+        <p><strong>Precio:</strong><span>$</span>{{ paquete.precio }}</p>
+        <button class="btn btn-warning" (click)="clickAgregarP(paquete)">Agregar</button>   
+    </div>
+    </div>
+</div>

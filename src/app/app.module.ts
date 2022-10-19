@@ -16,6 +16,8 @@ import { CursosCortosComponent } from './pages/cursos-cortos/cursos-cortos.compo
 import { HomeComponent } from './pages/home/home.component';
 import { GaleriaCursosComponent } from './components/galeria-cursos/galeria-cursos.component';
 import { TarjetaCursoComponent } from './components/tarjeta-curso/tarjeta-curso.component';
+import { GuardadoGaleriaComponent } from './components/producto/guardado-galeria/guardado-galeria.component';
+import { FormatoGaleriaComponent } from './components/producto/formato-galeria/formato-galeria.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { TarjetaCursoComponent } from './components/tarjeta-curso/tarjeta-curso.
     CursosCortosComponent,
     HomeComponent,
     GaleriaCursosComponent,
-    TarjetaCursoComponent
+    TarjetaCursoComponent,
+    GuardadoGaleriaComponent,
+    FormatoGaleriaComponent
   ],
   imports: [
     BrowserModule,

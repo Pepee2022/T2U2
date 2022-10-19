@@ -37,25 +37,26 @@ export class StoreService {
 
 
   paquetes: Paquete[] = [{
-    img: '/assets/img/montana.jpg',
+    imge: '/assets/img/montana.jpg',
     tour: 'Montaña de 7 Colores',
     descripcion: 'A unos 100 kilómetros al sureste de Cusco, Perú, existe un arcoíris hecho montaña.',
     precio: 250
   },
   {
-    img: '/assets/img/Palcoyo.jpg',
+    imge: '/assets/img/Palcoyo.jpg',
     tour: 'Cordillera de Palccoyo',
     descripcion: 'destino alternativo a la montaña de colores de Vinicunca con la misma majestuosidad.',
     precio: 400
   },
   {
-    img: '/assets/img/valle.jpg',
+    imge: '/assets/img/valle.jpg',
     tour: '4 Ruinas en Cusco',
     descripcion: 'Lugares de visita: Qoricancha, Sacsayhuaman, Qenqo, Pukapukara, Tambomachay y catedral de Cusco.',
     precio: 300
   }
   ];
-  pags: string[] = [];
+
+  carrito: Paquete [] = [];
 
 
   constructor() { }
@@ -64,8 +65,8 @@ export class StoreService {
     this.seleccionados.push(elemento);
   }
 
-  agregarPags(paque: string): void {
-    this.pags.push(paque);
+  agregarPags(paque: Paquete): void {
+    this.carrito.push(paque);
   }
 
 
