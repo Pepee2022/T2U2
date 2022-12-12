@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { NgxNavbarModule } from 'ngx-bootstrap-navbar';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -18,6 +20,9 @@ import { GaleriaCursosComponent } from './components/galeria-cursos/galeria-curs
 import { TarjetaCursoComponent } from './components/tarjeta-curso/tarjeta-curso.component';
 import { GuardadoGaleriaComponent } from './components/producto/guardado-galeria/guardado-galeria.component';
 import { FormatoGaleriaComponent } from './components/producto/formato-galeria/formato-galeria.component';
+import { PedidoComponent } from './pages/pedido/pedido.component';
+import { TarjetaCarritoComponent } from './components/tarjeta-carrito/tarjeta-carrito.component';
+import { CarritoComponent } from './components/carrito/carrito.component';
 
 @NgModule({
   declarations: [
@@ -31,11 +36,16 @@ import { FormatoGaleriaComponent } from './components/producto/formato-galeria/f
     GaleriaCursosComponent,
     TarjetaCursoComponent,
     GuardadoGaleriaComponent,
-    FormatoGaleriaComponent
+    FormatoGaleriaComponent,
+    PedidoComponent,
+    TarjetaCarritoComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
     AppRoutingModule,
     NgxNavbarModule,
     BsDropdownModule.forRoot(),

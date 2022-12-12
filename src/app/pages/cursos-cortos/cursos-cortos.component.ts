@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { curso } from 'src/app/model/curso';
-import { StoreService } from 'src/app/services/store.service'
+import { Paqueterias } from 'src/app/model/paqueterias';
+import { PaqueteriasServiceService } from 'src/app/services/paqueterias.service.service'
 
 @Component({
   selector: 'app-cursos-cortos',
@@ -9,14 +9,17 @@ import { StoreService } from 'src/app/services/store.service'
 })
 export class CursosCortosComponent implements OnInit {
 
-  cursos: curso[] = [
+  cursos: Paqueterias[] = [
   ];
 
-  constructor(private storeService: StoreService) { 
-    this.cursos = storeService.cursos;
+  constructor(private PaqueteriasServiceService: PaqueteriasServiceService) {
   }
 
   ngOnInit(): void {
+    this.PaqueteriasServiceService.getAllPaquetes()
+      .subscribe(data => {
+        this.cursos = data;
+      });
   }
 
 }

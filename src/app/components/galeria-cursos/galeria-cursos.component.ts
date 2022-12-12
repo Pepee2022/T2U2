@@ -1,5 +1,5 @@
 import { Component, Input ,OnInit } from '@angular/core';
-import { curso } from 'src/app/model/curso';
+import { Paqueterias } from 'src/app/model/paqueterias';
 import { StoreService } from 'src/app/services/store.service'
 
 @Component({
@@ -9,7 +9,7 @@ import { StoreService } from 'src/app/services/store.service'
 })
 export class GaleriaCursosComponent implements OnInit {
 
-  @Input() elementos: curso[] = [];
+  @Input() elementos: Paqueterias[] = [];
   seleccionados: string[] = [];
   // seleccionados: number = 0;
 

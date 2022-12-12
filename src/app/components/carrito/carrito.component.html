@@ -1,0 +1,4 @@
+<div *ngFor="let elemento of carrito">
+  <app-tarjeta-carrito [elemento]="elemento" (evento)="actualizaTotal()"></app-tarjeta-carrito>
+</div>
+<p><strong>Total Compra: </strong>{{ total }}</p>

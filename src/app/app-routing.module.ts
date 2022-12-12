@@ -4,6 +4,7 @@ import { DetalleProductoComponent } from './components/producto/detalle-producto
 import { GaleriaComponent } from './components/producto/galeria/galeria.component';
 import { CursosCortosComponent } from './pages/cursos-cortos/cursos-cortos.component';
 import { HomeComponent } from './pages/home/home.component';
+import { PedidoComponent } from './pages/pedido/pedido.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/detalleProducto', pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'cursosCortos', component: CursosCortosComponent },
+  { path: 'pedido', component: PedidoComponent },
 ];
 
 @NgModule({

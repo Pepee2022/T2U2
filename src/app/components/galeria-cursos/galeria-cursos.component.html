@@ -1,6 +1,6 @@
 <p>Elementos Seleccionados: {{ seleccionados.length }}</p>
 <div class="row">
-    <div class="col-6" *ngFor="let curso of elementos">
+    <div class="col-12 col-sm-6 col-md-4" *ngFor="let curso of elementos">
         <app-tarjeta-curso [curso]="curso" (pressAgregar)="seleccionar($event)"></app-tarjeta-curso>
     </div>
 </div>
